@@ -2,9 +2,15 @@
 
 <%= form_for @message do |f| %>
   <%= f.label :to %>
+<<<<<<< HEAD
   <%= f.text_field :to %>
   <%= f.label :from %>
   <%= f.text_field :from %>
+=======
+  <%= f.text_field :to, :value => "9716789823" %>
+  <%= f.label :from %>
+  <%= f.text_field :from, :value => "5038223444" %>
+>>>>>>> 0aa94613a4a24c351f4e40c4e2fd9aed37dc8bcf
   <%= f.label :body %>
   <%= f.text_area :body %>
   <%= f.submit "Send Text" %>

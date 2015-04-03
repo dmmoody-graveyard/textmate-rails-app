@@ -1,4 +1,8 @@
 class Message < ActiveRecord::Base
+<<<<<<< HEAD
+=======
+  has_and_belongs_to_many :contacts
+>>>>>>> 0aa94613a4a24c351f4e40c4e2fd9aed37dc8bcf
   validates :body, :presence => true
   validates :to, :presence => true
   validates :from, :presence => true
@@ -18,7 +22,13 @@ private
         :To => to,
         :From => from }
         ).execute
+<<<<<<< HEAD
     rescue
+=======
+    rescue RestClient::BadRequest => error
+      message = JSON.parse(error.response)['message']
+      errors.add(:base, message)
+>>>>>>> 0aa94613a4a24c351f4e40c4e2fd9aed37dc8bcf
       false
     end
   end

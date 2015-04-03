@@ -19,6 +19,10 @@ end
 group :test, :development do
   gem 'rspec-rails'
   gem 'dotenv-rails'
+<<<<<<< HEAD
+=======
+  gem 'pry'
+>>>>>>> 0aa94613a4a24c351f4e40c4e2fd9aed37dc8bcf
 end
 
 group :test do

@@ -2,10 +2,18 @@
 http_interactions:
 - request:
     method: post
+<<<<<<< HEAD
     uri: https://api.twilio.com/2010-04-01/Accounts//Messages.json
     body:
       encoding: US-ASCII
       string: Body=This%20is%20the%20body%20of%20the%20message&To=111222&From=9716789823
+=======
+    uri: https://<twilio account sid>:<twilio auth token>@api.twilio.com/2010-04-01/Accounts/<twilio
+      account sid>/Messages.json
+    body:
+      encoding: US-ASCII
+      string: Body=This%20is%20the%20body%20of%20the%20message&To=111222&From=5038223444
+>>>>>>> 0aa94613a4a24c351f4e40c4e2fd9aed37dc8bcf
     headers:
       Accept:
       - "*/*; q=0.5, application/xml"
@@ -19,12 +27,18 @@ http_interactions:
       - Ruby
   response:
     status:
+<<<<<<< HEAD
       code: 401
       message: Unauthorized
+=======
+      code: 400
+      message: BAD REQUEST
+>>>>>>> 0aa94613a4a24c351f4e40c4e2fd9aed37dc8bcf
     headers:
       Content-Type:
       - application/json
       Date:
+<<<<<<< HEAD
       - Wed, 01 Apr 2015 23:31:18 GMT
       Etag:
       - ''
@@ -32,17 +46,32 @@ http_interactions:
       - ''
       Www-Authenticate:
       - Basic realm="Twilio API"
+=======
+      - Thu, 02 Apr 2015 21:19:46 GMT
+>>>>>>> 0aa94613a4a24c351f4e40c4e2fd9aed37dc8bcf
       X-Powered-By:
       - AT-5000
       X-Shenanigans:
       - none
       Content-Length:
+<<<<<<< HEAD
       - '112'
+=======
+      - '153'
+>>>>>>> 0aa94613a4a24c351f4e40c4e2fd9aed37dc8bcf
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
+<<<<<<< HEAD
       string: '{"code":20003,"message":"Authenticate","more_info":"https:\/\/www.twilio.com\/docs\/errors\/20003","status":401}'
     http_version: 
   recorded_at: Wed, 01 Apr 2015 23:31:18 GMT
+=======
+      string: '{"code": 21211, "message": "The ''To'' number 111222 is not a valid
+        phone number.", "more_info": "https://www.twilio.com/docs/errors/21211", "status":
+        400}'
+    http_version: 
+  recorded_at: Thu, 02 Apr 2015 21:19:46 GMT
+>>>>>>> 0aa94613a4a24c351f4e40c4e2fd9aed37dc8bcf
 recorded_with: VCR 2.9.3

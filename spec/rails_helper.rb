@@ -16,4 +16,10 @@ VCR.configure do |c|
   c.cassette_library_dir = 'spec/cassettes'
   c.hook_into :webmock
   c.configure_rspec_metadata!
+<<<<<<< HEAD
+=======
+  c.filter_sensitive_data('<twilio account sid>') { ENV['TWILIO_ACCOUNT_SID'] }
+  c.filter_sensitive_data('<twilio auth token>') { ENV['TWILIO_AUTH_TOKEN'] }
+  c.ignore_localhost = true
+>>>>>>> 0aa94613a4a24c351f4e40c4e2fd9aed37dc8bcf
 end
